@@ -1,24 +1,14 @@
-
-
 package time
 
 import "errors"
-
 
 type Time struct {
 
     sec int64
 
-
     nsec int32
 
-
     loc *Location
-}
-
-// After reports whether the time instant t is after u.
-func (t Time) After(u Time) bool {
-    return t.sec > u.sec || t.sec == u.sec && t.nsec > u.nsec
 }
 
 // Before reports whether the time instant t is before u.
