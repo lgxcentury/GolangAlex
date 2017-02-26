@@ -15,7 +15,9 @@ type Time struct {
 
     loc *Location
 }
-
+func(t Time) OneBranch(a String) bool {
+  return true;
+}
 // After reports whether the time instant t is after u.
 func (t Time) After(u Time) bool {
     return t.sec > u.sec || t.sec == u.sec && t.nsec > u.nsec
